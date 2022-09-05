@@ -1,0 +1,207 @@
+         \documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+\usepackage{ wasysym }
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{ dsfont }
+\usepackage{ textcomp }
+\usepackage{amsfonts}
+\usepackage{ gensymb }
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\newtheorem{solution}{Решение}
+\newtheoremstyle{problemstyle}  % <name>
+        {3pt}                                               % <space above>
+        {25pt}                                               % <space below>
+        {\normalfont}                               % <body font>
+        {}                                                  % <indent amount}
+        {}                 % <theorem head font>
+        {\normalfont\bfseries.}         % <punctuation after theorem head>
+        {.5em}                                          % <space after theorem head>
+        {}                                                  % <theorem head spec (can be left empty, meaning `normal')>
+\theoremstyle{problemstyle}
+\newtheorem{problem}{\bfseriesЗадача}
+\newtheoremstyle{ans}  % <name>
+        {3pt}                                               % <space above>
+        {3pt}                                               % <space below>
+        {\normalfont}                               % <body font>
+        {}                                                  % <indent amount}
+        {}                 % <theorem head font>
+        {\normalfont\bfseries}         % <punctuation after theorem head>
+        {.5em}                                          % <space after theorem head>
+        {}                                                  % <theorem head spec (can be left empty, meaning `normal')>
+\theoremstyle{ans}
+\newtheorem{cor}{Corollary}
+\newtheorem*{ans}{Ответ}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{\bfseries\textit{Ответ}:}
+\newtheorem{prop}{Proposition}
+\newtheorem*{zad}{\zadname}
+\newtheorem{definition}{\bfseries\textit{Опредление}}
+\newtheorem{theorem}{\bfseries\textit{Теорема}}
+\newtheorem{example}{\textit{Пример}}
+\newtheorem{comment}{\bfseries{Замечание}}
+\newtheorem{train}{\textit{Упражнение}}
+\newtheorem{statement}{\textbf{Утверждение}}
+\newtheorem*{statement*}{ \textbf{Утверждение}}
+\newtheorem{conseq}{\textbf{Следствие}}
+\newtheorem*{conseq*}{\textbf{Следствие}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Expect}{\mathsf{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathbb{U}}
+
+
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\usepackage[unicode, pdftex]{hyperref}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+%---------------------------------------------------------
+\usepackage{amsfonts}
+%Hyphenation rules
+%---------------------------------------------------------
+\usepackage{hyphenat}
+\hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать}
+ \usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+
+
+\title{Лекция 1 по введению в IOT}
+\author{Мячин Данил БПМИ187}
+\date
+
+\begin{document}
+\begin{center}
+Игорь Рубенович Агамирзян\\
+Введение в IOT/CPS
+\end{center}
+\tableofcontents
+\newpage
+\section{Лекция 1. Вводная}
+Ничего особо не было, просто поговорили, познакомиилсь.
+\newpage
+\section{Лекция 2. О том, как автоматизация пришла в наш мир}
+Субтрактивные методы обработки - убирают материал и делают изделие.\\
+Аддитивные методы обработки - наращивают материал и делают изделие.
+
+\subsection{Киберфизические системы}
+\begin{itemize}
+    \item Либой станок или робот ялвяется киберфизической системой
+    \item Киберфизическая система состоит из сенсоров (датчиков), контроллеров (вычислительных блоков) и актуторов (исполнительных элементов)
+    \item Примеры киберфизических систем - станки? роботы 
+\end{itemize}
+
+\subsection{Прицнип цифрового кодирование}
+
+Что может/умеет делать выислительный блок (компьютер, микроконтроллер и т.д)?
+
+\begin{itemize}
+    \item Считывать кодированный поток цифровых данных от сенсоров
+    \item Обрабатывать полученные данные в соответствии с програмной логикой и принимать реешния, базируясь на полученных данных
+    \item Передавать кодированный поток цифровых данных на исполнение актуаторам
+\end{itemize}
+
+Это совершенно универсальный принцип - другого не бывает.
+
+Цифровый данные всегда кодируются значениями да/нет
+
+\begin{itemize}
+    \item 0/1
+    \item true/false
+    \item есть отверстие/нет отверстия (перфокарта)
+    \item есть нажатие клавиши/нет нажатия клавиши
+    \item пиксель освещён/пиксель погашен
+\end{itemize}
+
+
+\subsection{NC и CNC - компьютер как инструмент управления}
+
+% --- тут опечатка на слайде
+\begin{itemize}
+    \item Принцип управления первых механических и электронных станков, использовавших Жаккардов принцип - управления по программе с помощью перфокарт или перфоленты - получил название Numerical Control (NC)
+    \item Использование компьютера для управления, принятый в киберфизических системах принято называть Computer Numerical Control. (CNC)
+    \item Разница - в наличии сенсоров, позволяющих организовать интеллектуальную обратную связь
+    \item Прогресс в микроэлектронике (уменьшение размеров и энергопотребления при одновременном росте вычислительной мощности контроллеров) позволил реализовать весь современный тенхнологический ландшафт
+\end{itemize}
+
+
+\subsection{Управляющее программное обеспечение}
+
+\begin{itemize}
+    \item Вторым необходимым компонентом современных технологий является программное обеспечение
+    \item Сегодня не существует высокотехнологичных устройств, не содержащих внутри себя микроконтроллеров и программного обеспечения
+    \item Если на устройстве есть дисплей, значит, внутри него есть микроконтроллер и управляющее программное обеспечение
+\end{itemize}
+
+Всё современное программное ообеспечение разделилось на несколько классов, для которых используются различные языки и среды программирования
+
+\begin{itemize}
+    \item Инфраструктурное ПО - операционные системы, базы данных и т.д.
+    \item Корпоративное ПО - это весь набор АСУ (ERP, CRM, и т.д.)
+    \item WEB ПО - серверы и HTML 5.0, клиенсткие программы на Java и JS
+    \item Встроенное (embedded) ПО - АСУТП, именно это программное обеспечение управляет миром
+\end{itemize}
+
+\subsection{Кодирование цифровых элекронных сигналов}
+Пикча момент
+
+\begin{itemize}
+    \item В электронных устройствах цифровые значения кодируются уровнями напряжений в текущей момент времени
+    \item Существует ряд стандартов, в которых, как правило, логический 0 кодируется напряжением 0 V, а логическая единица - значением +5V для TTL-kлогики или +3.3 V для CMOS-логики
+    \begin{itemize}
+        \item TTL \href{https://www.youtube.com/watch?v=qOtHc_x70hY}{15-ти минутная лекция}
+        \item CMOS \href{https://www.youtube.com/watch?v=9eIkCWrPIqY}{15-ти минутная лекция}
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Кодирование логических значений уровнями напряжения}
+\begin{itemize}
+    \item Последовательности цифровых (двоичных) данных кодируются уровнями напряжений 0-5 V с определённой частотой дискретизации (квант времени лии такт)
+    \item Принято называть эти уровни HIGH для наличия сигнала (2-5 V) и LOW для его отсутствия (0-0.8V)
+    \item В случае, еесли уровень меняется в течение такта, то сигнал может быть не определён
+\end{itemize}
+
+\subsection{Транзистор (упрощённо для цифровой логики)}
+\href{https://www.youtube.com/watch?v=X99j9CVvf1w}{Какой-то видос на ютубе на 4 минуты} 
+\begin{itemize}
+    \item В цифровой TTL-логике тразистор может упрощённо считаться управляемым выключателем (ключом)
+    \item Если на базу тразистора подан сигнал HIGH, выключатель включён
+    \item Если на базу тразистора подан сигнал LOW, выключатель выключен
+\end{itemize}
+
+\subsection{Основные логические элементы}
+\begin{itemize}
+    \item Сущестует три основных логических элемента цифровой логики, соответствующие операциям булевой алгебры.
+    \item С их помощью можно реализовать любую логическую схему
+    \item Для удобства проектирования реализации принято выделять ещё некоторые элементы.
+\end{itemize}
+
+\end{document}
